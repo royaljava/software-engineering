@@ -1,9 +1,20 @@
-#include <stdio.h>
+#include <stdio.h>  
 #include <stdlib.h>
+#include <string.h>
 
 void help()
 {
-	printf("this is help command!\n");    
+	printf("---------------------------------------------\n");
+	printf("---------------------------------------------\n");
+	printf("|help   + cmd tips                           \n");
+	printf("|add    + addition of two numbers.           \n");
+	printf("|sub    + subtraction of two numbers.        \n");
+	printf("|mul    + Multiplication of two numbers.     \n");
+	printf("|div    + Division of two numbers.           \n");
+	printf("|squ    + suqare of a number.                \n");
+	printf("|rem    + remainder of two numbers.          \n");
+	printf("|quit   + exit cmd.                          \n");
+	printf("---------------------------------------------\n");
 }
 
 void quit()
@@ -11,34 +22,70 @@ void quit()
 	exit(0);
 }
 
-void sleep()
+void add()
 {
-	printf("this is sleep command!\n");
+	double num1, num2, sum;
+	printf("please input two numbers to add!\n");
+	scanf("%lf %lf", &num1, &num2);
+	sum = num1 + num2;
+	printf("%lf + %lf = %lf\n", num1, num2, sum);
 }
 
-void play()
+void mul()
 {
-	printf("this is play command!\n");
+	double num1, num2;
+	double result;
+	printf("Please input two numbers to multiple\n");
+	scanf("%lf %lf", &num1, &num2);
+	result = num1 * num2;
+	printf("%lf - %lf = %lf\n", num1, num2, result);
 }
 
-void writeCode()
+void sub()
 {
-	printf("this is writeCode command!\n");
+	double num1, num2;
+	double result;
+	printf("Please input two numbers to subtract!\n");
+	scanf("%lf %lf", &num1, &num2);
+	result = num1 - num2;
+	printf("%lf - %lf = %lf\n", num1, num2, result);
 }
 
-void readCode()
+void Div()
 {
-	printf("this is the readCode command!\n");
+	int num1, num2;
+	double result;
+	printf("Please input two numbers to get the quotient!\n");
+	scanf("%d %d", &num1, &num2);
+	if (num2 == 0)
+	{
+		printf("Error: divisor can not be zero!\n");
+	}
+	else
+	{
+		result = num1 / num2;
+		printf("%d / %d = %lf\n", num1, num2, result);
+	}
 }
 
-void kick()
+void squ()
 {
-	printf("this is the kick command!\n");
+	double num1;
+	double result;
+	printf("Please input a number to get its square!\n");
+	scanf("%lf", &num1);
+	result = num1 * num1;
+	printf("%lf ^2 = %lf\n", num1, result);
 }
 
-void wake()
+void rem()
 {
-	printf("this is the wake command!\n");
+	int num1, num2;
+	int result;
+	printf("Please input two numbers to calculate the remainder!\n");
+	scanf("%d %d", &num1, &num2);
+	result = num1 % num2;
+	printf("%d %% %d = %d\n", num1, num2, result);
 }
 
 void errorinform()
@@ -49,42 +96,42 @@ void errorinform()
 void  main()
 {
 	char cmd[128];
-	while(1)
+	while (1)
 	{
-		scanf("%s",cmd);
+		scanf("%s", cmd);
 		int comp;
-		if(comp=(strcmp(cmd,"help")==0))
+		if (comp = (strcmp(cmd, "help") == 0))
 		{
 			help();
 		}
-		else if(comp=(strcmp(cmd,"quit")==0))
+		else if (comp = (strcmp(cmd, "quit") == 0))
 		{
 			quit();
 		}
-		else if(comp=(strcmp(cmd,"sleep")==0))
+		else if (comp = (strcmp(cmd, "add") == 0))
 		{
-			sleep();
+			add();
 		}
-		else if(comp=(strcmp(cmd,"play")==0))
+		else if (comp = (strcmp(cmd, "sub") == 0))
 		{
-			play();
+			sub();
 		}
-		else if(comp=(strcmp(cmd,"writeCode")==0))
-        {
-            writeCode();
-        }	
-		else if(comp=(strcmp(cmd,"readCode")==0))
-        {
-            readCode();
-        }
-		else if(comp=(strcmp(cmd,"kick")==0))
-        {
-            kick();
-        }
-		else if(comp=(strcmp(cmd,"wake")==0))
-        {
-            wake();
-        }
+		else if (comp = (strcmp(cmd, "mul") == 0))
+		{
+			mul();
+		}
+		else if (comp = (strcmp(cmd, "div") == 0))
+		{
+			Div();
+		}
+		else if (comp = (strcmp(cmd, "squ") == 0))
+		{
+			squ();
+		}
+		else if (comp = (strcmp(cmd, "rem") == 0))
+		{
+			rem();
+		}
 		else
 		{
 			errorinform();
@@ -92,7 +139,6 @@ void  main()
 
 	}
 }
-
 
 
 
