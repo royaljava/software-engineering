@@ -1,0 +1,1 @@
+/home/royal/.vimrc
