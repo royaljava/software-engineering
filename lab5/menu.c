@@ -19,7 +19,6 @@
  *
  */
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "linktable.h"
@@ -157,51 +156,51 @@ int InitMenuData(tLinkTable ** ppLinktable)
 
     *ppLinktable=CreateLinkTable();
     tDataNode* pNode = (tDataNode*)malloc(sizeof(tDataNode));
-	pNode->cmd = "help";
-	pNode->desc = "Menu List";
-	pNode->handler = help;
-	AddLinkTableNode(*ppLinktable,(tLinkTableNode *)pNode);
+    pNode->cmd = "help";
+    pNode->desc = "Menu List";
+    pNode->handler = help;
+    AddLinkTableNode(*ppLinktable,(tLinkTableNode *)pNode);
 
-	pNode = (tDataNode*)malloc(sizeof(tDataNode));
-	pNode->cmd = "add";
-	pNode->desc = "addition of two numbers";
-	pNode->handler= add;
-	AddLinkTableNode(*ppLinktable,(tLinkTableNode *)pNode);
+    pNode = (tDataNode*)malloc(sizeof(tDataNode));
+    pNode->cmd = "add";
+    pNode->desc = "addition of two numbers";
+    pNode->handler= add;
+    AddLinkTableNode(*ppLinktable,(tLinkTableNode *)pNode);
 
-	pNode = (tDataNode*)malloc(sizeof(tDataNode));
-	pNode->cmd = "sub";
-	pNode->desc = "subtraction of two numbers";
-	pNode->handler= sub;
-	AddLinkTableNode(*ppLinktable,(tLinkTableNode *)pNode);
+    pNode = (tDataNode*)malloc(sizeof(tDataNode));
+    pNode->cmd = "sub";
+    pNode->desc = "subtraction of two numbers";
+    pNode->handler= sub;
+    AddLinkTableNode(*ppLinktable,(tLinkTableNode *)pNode);
 
-	pNode = (tDataNode*)malloc(sizeof(tDataNode));
-	pNode->cmd = "mul";
-	pNode->desc = "Multiplication of two numbers";
-	pNode->handler= mul;
-	AddLinkTableNode(*ppLinktable,(tLinkTableNode *)pNode);
+    pNode = (tDataNode*)malloc(sizeof(tDataNode));
+    pNode->cmd = "mul";
+    pNode->desc = "Multiplication of two numbers";
+    pNode->handler= mul;
+    AddLinkTableNode(*ppLinktable,(tLinkTableNode *)pNode);
 
-	pNode = (tDataNode*)malloc(sizeof(tDataNode));
-	pNode->cmd = "div";
-	pNode->desc = "Division of two numbers";
-	pNode->handler= Div;
-	AddLinkTableNode(*ppLinktable,(tLinkTableNode *)pNode);
+    pNode = (tDataNode*)malloc(sizeof(tDataNode));
+    pNode->cmd = "div";
+    pNode->desc = "Division of two numbers";
+    pNode->handler= Div;
+    AddLinkTableNode(*ppLinktable,(tLinkTableNode *)pNode);
 
-	pNode = (tDataNode*)malloc(sizeof(tDataNode));
-	pNode->cmd = "squ";
-	pNode->desc = "suqare of a number";
-	pNode->handler= squ;
-	AddLinkTableNode(*ppLinktable,(tLinkTableNode *)pNode);
+    pNode = (tDataNode*)malloc(sizeof(tDataNode));
+    pNode->cmd = "squ";
+    pNode->desc = "suqare of a number";
+    pNode->handler= squ;
+    AddLinkTableNode(*ppLinktable,(tLinkTableNode *)pNode);
 
-	pNode = (tDataNode*)malloc(sizeof(tDataNode));
-	pNode->cmd = "rem";
-	pNode->desc = "remainder of two numbers";
-	pNode->handler= rem;
-	AddLinkTableNode(*ppLinktable,(tLinkTableNode *)pNode);
+    pNode = (tDataNode*)malloc(sizeof(tDataNode));
+    pNode->cmd = "rem";
+    pNode->desc = "remainder of two numbers";
+    pNode->handler= rem;
+    AddLinkTableNode(*ppLinktable,(tLinkTableNode *)pNode);
 
-	pNode = (tDataNode*)malloc(sizeof(tDataNode));
-	pNode->cmd = "quit";
-	pNode->desc = "exit cmd";
-	pNode->handler= quit;
+    pNode = (tDataNode*)malloc(sizeof(tDataNode));
+    pNode->cmd = "quit";
+    pNode->desc = "exit cmd";
+    pNode->handler= quit;
     AddLinkTableNode(*ppLinktable,(tLinkTableNode *)pNode);
 
     return 0;
